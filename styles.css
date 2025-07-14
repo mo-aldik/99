@@ -18,7 +18,6 @@
           src: url("./fonts/NeueMachina-Ultrabold.otf") format("opentype");
       }
 
-
       * {
           margin: 0;
           padding: 0;
@@ -27,8 +26,10 @@
 
       body {
           font-family: "Neue Machina", monospace;
-          background: linear-gradient(to right, #1f1f1f, #2d321f);
-          color: #e1ff00;
+          background: linear-gradient(135deg,
+                  rgba(46, 45, 45, 1) 0%,
+                  rgba(61, 68, 47, 1) 100%);
+          color: #d1ff00;
           min-height: 110vh;
       }
 
@@ -44,11 +45,11 @@
           font-size: 2rem;
           text-align: start;
           margin-top: 1rem;
-          color: #e1ff00;
+          color: #d1ff00;
       }
 
       .progress-track {
-          background-color: #3d3d3d;
+          background-color: #787763;
           border-radius: 20px;
           height: 20px;
           width: 360px;
@@ -56,7 +57,7 @@
       }
 
       .progress-value {
-          background-color: #e1ff00;
+          background-color: #d1ff00;
           width: 95%;
           height: 100%;
           border-radius: 20px;
@@ -132,7 +133,6 @@
               text-align: center;
           }
 
-
           .glow-icon-wrapper {
               justify-self: center;
               order: -1;
@@ -157,12 +157,11 @@
           height: 800px;
           transform: translate(-50%, -50%);
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(225, 255, 0, 0.25), transparent 90%);
+          background: radial-gradient(circle, #c5ff00, transparent 90%);
           filter: blur(120px);
           animation: rotateCircle 2s linear infinite;
           z-index: -1;
       }
-
 
       @keyframes rotateCircle {
           0% {
