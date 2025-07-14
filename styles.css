@@ -25,6 +25,7 @@
       }
 
       body {
+          overflow-x: hidden;
           font-family: "Neue Machina", monospace;
           background: linear-gradient(135deg,
                   rgba(46, 45, 45, 1) 0%,
@@ -137,12 +138,41 @@
               justify-self: center;
               order: -1;
           }
+
+          .glow-icon-wrapper {
+              min-width: auto;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+              margin-bottom: 2rem;
+              padding: 0 1rem;
+          }
+
+          .rotating-glow-circle {
+              width: 300px;
+              height: 300px;
+              filter: blur(80px);
+              transform: translate(-50%, -50%);
+          }
+
+          .glow-icon-wrapper svg {
+              width: 100%;
+              height: auto;
+              max-width: 300px
+          }
+      }
+
+      @media (max-width: 480px) {
+          .rotating-glow-circle {
+              width: 250px;
+              height: 250px;
+              filter: blur(60px);
+          }
       }
 
       .glow-icon-wrapper {
           position: relative;
           margin-bottom: 40px;
-          min-width: 600px;
           max-height: 500px;
           display: flex;
           align-items: center;
