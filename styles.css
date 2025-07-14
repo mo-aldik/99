@@ -31,12 +31,14 @@
                   rgba(46, 45, 45, 1) 0%,
                   rgba(61, 68, 47, 1) 100%);
           color: #d1ff00;
-          min-height: 110vh;
+          min-height: 100vh;
       }
 
       .page-container {
           overflow: hidden;
           padding: 3rem;
+          min-height: 110vh;
+          width: '100%';
       }
 
       .main-content {
