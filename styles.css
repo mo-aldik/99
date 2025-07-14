@@ -36,32 +36,6 @@
           padding: 3rem;
       }
 
-      .site-logo {
-          font-family: "Changa", sans-serif;
-          line-height: 0.6;
-          color: #e1ff00;
-      }
-
-      .site-logo .line1 {
-          font-size: 50px;
-          font-weight: bold;
-          display: block;
-          text-indent: 0px;
-      }
-
-      .site-logo .line2 {
-          font-size: 50px;
-          font-weight: bold;
-          display: block;
-          text-indent: 15px;
-      }
-
-      .site-logo .line3 {
-          font-size: 14px;
-          display: block;
-          text-indent: 50px;
-      }
-
       .main-content {
           margin-top: 3rem;
       }
@@ -117,52 +91,6 @@
           text-decoration: underline;
       }
 
-      .glow-icon {
-          z-index: -1;
-          width: 100%;
-          height: auto;
-          max-height: 800px;
-          animation: perfectCircularShadow 2s linear infinite;
-      }
-
-      @keyframes perfectCircularShadow {
-          0% {
-              filter: drop-shadow(0px -50px 80px #e1ff00) drop-shadow(0px -50px 80px #e1ff00);
-          }
-
-          12.5% {
-              filter: drop-shadow(35px -35px 80px #e1ff00) drop-shadow(35px -35px 80px #e1ff00);
-          }
-
-          25% {
-              filter: drop-shadow(50px 0px 80px #e1ff00) drop-shadow(50px 0px 80px #e1ff00);
-          }
-
-          37.5% {
-              filter: drop-shadow(35px 35px 80px #e1ff00) drop-shadow(35px 35px 80px #e1ff00);
-          }
-
-          50% {
-              filter: drop-shadow(0px 50px 80px #e1ff00) drop-shadow(0px 50px 80px #e1ff00);
-          }
-
-          62.5% {
-              filter: drop-shadow(-35px 35px 80px #e1ff00) drop-shadow(-35px 35px 80px #e1ff00);
-          }
-
-          75% {
-              filter: drop-shadow(-50px 0px 80px #e1ff00) drop-shadow(-50px 0px 80px #e1ff00);
-          }
-
-          87.5% {
-              filter: drop-shadow(-35px -35px 80px #e1ff00) drop-shadow(-35px -35px 80px #e1ff00);
-          }
-
-          100% {
-              filter: drop-shadow(0px -50px 80px #e1ff00) drop-shadow(0px -50px 80px #e1ff00);
-          }
-      }
-
       .intro-section {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -174,6 +102,19 @@
       @media (max-width: 768px) {
           body {
               min-height: 150vh;
+          }
+
+          .page-container {
+              padding: 2rem 1rem;
+          }
+
+          .progress-section h1 {
+              font-size: 1.4rem;
+          }
+
+          .progress-track {
+              height: 20px;
+              width: 260px;
           }
 
           .vertical-divider {
@@ -191,6 +132,7 @@
               text-align: center;
           }
 
+
           .glow-icon-wrapper {
               justify-self: center;
               order: -1;
@@ -198,8 +140,36 @@
       }
 
       .glow-icon-wrapper {
+          position: relative;
+          margin-bottom: 40px;
+          min-width: 600px;
           max-height: 500px;
           display: flex;
           align-items: center;
           justify-content: center;
+      }
+
+      .rotating-glow-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 800px;
+          height: 800px;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(225, 255, 0, 0.25), transparent 90%);
+          filter: blur(120px);
+          animation: rotateCircle 2s linear infinite;
+          z-index: -1;
+      }
+
+
+      @keyframes rotateCircle {
+          0% {
+              transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+          }
+
+          100% {
+              transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg);
+          }
       }
