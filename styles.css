@@ -38,6 +38,7 @@
       .page-container {
           padding: 3rem;
           width: '100%';
+          overflow-x: hidden;
       }
 
       .main-content {
