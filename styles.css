@@ -88,6 +88,57 @@ header {
   width: 90%;
   border-radius: 10px;
   transition: width 0.5s ease-in-out;
+  animation: fillProgress 2s ease-in-out forwards;
+
+}
+
+.progress p {
+  font-size: 1.2rem;
+  color: #fff;
+  white-space: nowrap;
+  /* سطر واحد فقط */
+  overflow: hidden;
+  /* يخفي النص الزائد */
+  border-right: 2px solid #fff;
+  /* لمحاكاة المؤشر */
+  width: 0;
+  /* يبدأ من 0 */
+  animation:
+    typewriter 3s steps(30, end) forwards,
+    blinkCaret 0.7s step-end infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fff;
+  }
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 90%;
+    /* يمكنك تغييره لأي نسبة تريد */
+  }
 }
 
 .first-section>div:first-child svg+div {
@@ -153,7 +204,6 @@ header {
 
   .first-section>div:nth-of-type(2) {
     order: -1;
-    margin-left: 3rem;
   }
 
   .contact {
