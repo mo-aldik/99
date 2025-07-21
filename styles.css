@@ -96,48 +96,35 @@ header {
   font-size: 1.2rem;
   color: #fff;
   white-space: nowrap;
-  /* سطر واحد فقط */
   overflow: hidden;
-  /* يخفي النص الزائد */
   border-right: 2px solid #fff;
-  /* لمحاكاة المؤشر */
-  width: 0;
-  /* يبدأ من 0 */
+  width: 0ch;
   animation:
-    typewriter 3s steps(30, end) forwards,
-    blinkCaret 0.7s step-end infinite;
+    typewriter 3s steps(20, end) forwards,
+    blinkCaret 3s step-end forwards;
+  box-sizing: content-box;
 }
 
+/* كتابة النص */
 @keyframes typewriter {
   from {
-    width: 0;
+    width: 0ch;
   }
 
   to {
-    width: 100%;
+    width: 20ch;
   }
 }
 
+/* وميض المؤشر */
 @keyframes blinkCaret {
 
-  0%,
-  100% {
-    border-color: transparent;
-  }
-
-  50% {
+  0% {
     border-color: #fff;
   }
-}
 
-@keyframes fillProgress {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 90%;
-    /* يمكنك تغييره لأي نسبة تريد */
+  100% {
+    border-color: transparent;
   }
 }
 
