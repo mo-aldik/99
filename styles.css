@@ -105,7 +105,6 @@ header {
   box-sizing: content-box;
 }
 
-/* كتابة النص */
 @keyframes typewriter {
   from {
     width: 0ch;
@@ -116,7 +115,6 @@ header {
   }
 }
 
-/* وميض المؤشر */
 @keyframes blinkCaret {
 
   0% {
@@ -127,6 +125,18 @@ header {
     border-color: transparent;
   }
 }
+
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 90%;
+  }
+}
+
 
 .first-section>div:first-child svg+div {
   margin-inline-start: 8rem;
