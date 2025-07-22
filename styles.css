@@ -205,7 +205,6 @@ header {
 
   .first-section>div:nth-of-type(2) {
     order: -1;
-    margin-top: -8rem;
   }
 
   .contact {
