@@ -88,22 +88,10 @@ header {
   width: 90%;
   border-radius: 10px;
   transition: width 0.5s ease-in-out;
-  animation: fillProgress 2s ease-in-out forwards;
 
 }
 
-.progress p {
-  font-size: 1.2rem;
-  color: #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  width: 0ch;
-  animation:
-    typewriter 3s steps(20, end) forwards,
-    blinkCaret 3s step-end forwards;
-  box-sizing: content-box;
-}
+
 
 .first-section>div:first-child svg+div {
   margin-inline-start: 8rem;
