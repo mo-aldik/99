@@ -88,7 +88,7 @@ header {
   width: 90%;
   border-radius: 10px;
   transition: width 0.5s ease-in-out;
-  animation: fillProgress 1.5s ease-in-out forwards;
+  animation: fillProgress 2s ease-in-out forwards;
 
 }
 
@@ -100,43 +100,10 @@ header {
   border-right: 2px solid #fff;
   width: 0ch;
   animation:
-    typewriter 1.5s steps(20, end) forwards,
-    blinkCaret 1.5s step-end forwards;
+    typewriter 3s steps(20, end) forwards,
+    blinkCaret 3s step-end forwards;
   box-sizing: content-box;
 }
-
-@keyframes typewriter {
-  from {
-    width: 0ch;
-  }
-
-  to {
-    width: 20ch;
-  }
-}
-
-@keyframes blinkCaret {
-
-  0% {
-    border-color: #fff;
-  }
-
-  100% {
-    border-color: transparent;
-  }
-}
-
-
-@keyframes fillProgress {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 90%;
-  }
-}
-
 
 .first-section>div:first-child svg+div {
   margin-inline-start: 8rem;
@@ -184,10 +151,6 @@ header {
   font-weight: bold;
 }
 
-.first-section>div:nth-of-type(2) {
-  margin-top: -5rem;
-}
-
 @media (max-width: 1200px) {
   header {
     display: flex;
@@ -205,6 +168,7 @@ header {
 
   .first-section>div:nth-of-type(2) {
     order: -1;
+    margin-top: -8rem;
   }
 
   .contact {
