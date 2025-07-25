@@ -29,9 +29,11 @@ body {
   font-family: "NeueMachina", sans-serif;
   color: white;
   background: #2e2d2d;
-  background: linear-gradient(135deg,
-      rgba(46, 45, 45, 1) 0%,
-      rgba(62, 68, 49, 1) 28%);
+  background: linear-gradient(
+    135deg,
+    rgba(46, 45, 45, 1) 0%,
+    rgba(62, 68, 49, 1) 28%
+  );
 }
 
 header {
@@ -52,17 +54,17 @@ header {
   display: flex;
 }
 
-.first-section>div {
+.first-section > div {
   flex: 1;
 }
 
-.first-section>div:first-child {
+.first-section > div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.first-section>div:first-child svg {
+.first-section > div:first-child svg {
   margin: 3rem;
 }
 
@@ -90,7 +92,7 @@ header {
   transition: width 0.5s ease-in-out;
 }
 
-.first-section>div:first-child svg+div {
+.first-section > div:first-child svg + div {
   margin-inline-start: 8rem;
 }
 
@@ -121,25 +123,26 @@ header {
   background-color: white;
 }
 
-.divided+div {
+.divided + div {
   display: flex;
   flex-direction: column;
 }
 
-.divided+div>div {
+.divided + div > div {
   font-family: "NeueMachina", sans-serif;
   display: flex;
   gap: 8px;
 }
 
-.divided+div>div a {
+.divided + div > div a {
   font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
-.first-section>div:nth-of-type(2) {
+.first-section > div:nth-of-type(2) {
   margin-top: -8rem;
 }
-
 
 @media (max-width: 1200px) {
   header {
@@ -156,7 +159,7 @@ header {
     flex-direction: column;
   }
 
-  .first-section>div:nth-of-type(2) {
+  .first-section > div:nth-of-type(2) {
     order: -1;
   }
 
